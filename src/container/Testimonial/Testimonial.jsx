@@ -7,7 +7,7 @@ import { urlFor, client } from '../../client';
 import './Testimonial.scss';
 
 const Testimonial = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(1);
   const [testimonials, setTestimonials] = useState([]);
   const [brands, setBrands] = useState([]);
 
