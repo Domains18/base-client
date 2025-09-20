@@ -1,0 +1,509 @@
+/* Neon + Winter Theme Component Library - Pure CSS */
+
+/* ==================== BUTTONS ==================== */
+
+/* Primary Neon Button */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  padding: 0.75rem 1.5rem;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: transparent;
+  border: 2px solid var(--neon-cyan);
+  color: var(--neon-cyan);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  
+  background-image: linear-gradient(45deg, transparent 0%, rgba(0, 255, 255, 0.1) 50%, transparent 100%);
+  background-size: 200% 200%;
+  background-position: 100% 0;
+}
+
+.btn-primary:hover {
+  background-position: 0 100%;
+  background-color: var(--neon-cyan);
+  color: var(--winter-900);
+  box-shadow: 0 0 20px var(--neon-cyan);
+  text-shadow: none;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+  left: 100%;
+}
+
+/* Secondary Neon Button */
+.btn-secondary {
+  position: relative;
+  overflow: hidden;
+  padding: 0.75rem 1.5rem;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: transparent;
+  border: 2px solid var(--neon-purple);
+  color: var(--neon-purple);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: var(--neon-purple);
+  color: var(--winter-900);
+  box-shadow: 0 0 20px var(--neon-purple);
+}
+
+/* Ghost Button */
+.btn-ghost {
+  padding: 0.75rem 1.5rem;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: transparent;
+  color: var(--winter-300);
+  border: 1px solid var(--winter-600);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-ghost:hover {
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+/* ==================== CARDS ==================== */
+
+/* Glass Card */
+.card-glass {
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background: rgba(248, 250, 252, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(71, 85, 105, 0.5);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card-glass:hover {
+  border-color: rgba(0, 255, 255, 0.3);
+  background: rgba(0, 255, 255, 0.05);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+/* Neon Card */
+.card-neon {
+  position: relative;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background: rgba(30, 41, 59, 0.5);
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.card-neon::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.1) 0%, transparent 50%, rgba(128, 0, 255, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-neon:hover::before {
+  opacity: 1;
+}
+
+.card-neon:hover {
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 20px var(--neon-cyan);
+  transform: translateY(-2px);
+}
+
+/* Cyber Card */
+.card-cyber {
+  position: relative;
+  padding: 1.5rem;
+  background: rgba(15, 23, 42, 0.9);
+  border-left: 4px solid var(--neon-green);
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+  
+  background-image: 
+    linear-gradient(45deg, transparent 49%, rgba(0, 255, 128, 0.1) 50%, transparent 51%),
+    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0, 255, 128, 0.05) 2px, rgba(0, 255, 128, 0.05) 4px);
+}
+
+/* ==================== INPUTS ==================== */
+
+/* Neon Input */
+.input-neon {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid var(--winter-600);
+  color: var(--winter-100);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  font-family: 'Oxanium', sans-serif;
+}
+
+.input-neon::placeholder {
+  color: var(--winter-400);
+}
+
+.input-neon:focus {
+  outline: none;
+  border-color: var(--neon-cyan);
+  background: rgba(30, 41, 59, 0.7);
+  box-shadow: 
+    0 0 0 2px rgba(0, 255, 255, 0.3),
+    0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+/* Cyber Input */
+.input-cyber {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid var(--winter-600);
+  border-left: 4px solid var(--neon-green);
+  color: var(--winter-100);
+  font-family: 'Fira Code', monospace;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+}
+
+.input-cyber:focus {
+  outline: none;
+  border-color: var(--neon-green);
+  box-shadow: 0 0 20px rgba(0, 255, 128, 0.3);
+}
+
+/* ==================== NAVIGATION ==================== */
+
+/* Cyber Nav */
+.nav-cyber {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid var(--winter-700);
+  backdrop-filter: blur(10px);
+  border-radius: 0.5rem;
+}
+
+.nav-cyber::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 0.5rem;
+  background: linear-gradient(90deg, rgba(0, 255, 255, 0.1) 0%, rgba(128, 0, 255, 0.1) 50%, rgba(255, 0, 255, 0.1) 100%);
+  opacity: 0.5;
+}
+
+.nav-item {
+  position: relative;
+  padding: 0.5rem 1rem;
+  color: var(--winter-300);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  color: var(--neon-cyan);
+  background: rgba(30, 41, 59, 0.5);
+}
+
+.nav-item.active {
+  color: var(--neon-cyan);
+  background: rgba(30, 41, 59, 0.7);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+/* ==================== CONTAINERS ==================== */
+
+/* Hero Section */
+.hero-cyber {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--winter-900) 0%, var(--winter-800) 50%, var(--winter-900) 100%);
+  
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(128, 0, 255, 0.1) 0%, transparent 50%);
+}
+
+.hero-cyber::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 100px 100px;
+  animation: grid-pulse 8s ease-in-out infinite;
+}
+
+/* Section Container */
+.section-cyber {
+  position: relative;
+  padding: 5rem 1rem;
+  background: rgba(15, 23, 42, 0.5);
+  background-image: linear-gradient(45deg, transparent 49%, rgba(0, 255, 255, 0.01) 50%, transparent 51%);
+}
+
+/* ==================== TEXT EFFECTS ==================== */
+
+/* Glitch Text */
+.text-glitch {
+  position: relative;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  color: var(--neon-cyan);
+  animation: matrix-flicker 3s infinite;
+}
+
+.text-glitch::before,
+.text-glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.text-glitch::before {
+  color: var(--neon-pink);
+  animation: glitch-1 0.3s infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+}
+
+.text-glitch::after {
+  color: var(--neon-green);
+  animation: glitch-2 0.3s infinite;
+  clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+}
+
+/* Typing Effect */
+.text-typing {
+  font-family: 'Fira Code', monospace;
+  color: var(--neon-green);
+  border-right: 2px solid;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Neon Gradient Text */
+.text-gradient-neon {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--neon-cyan) 0%, var(--neon-purple) 50%, var(--neon-pink) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease-in-out infinite;
+}
+
+/* ==================== ANIMATIONS ==================== */
+
+@keyframes glitch-1 {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
+
+@keyframes glitch-2 {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(2px, -2px); }
+  40% { transform: translate(2px, 2px); }
+  60% { transform: translate(-2px, -2px); }
+  80% { transform: translate(-2px, 2px); }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: currentColor; }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ==================== UTILITIES ==================== */
+
+/* Backdrop Effects */
+.backdrop-cyber {
+  backdrop-filter: blur(20px) saturate(180%);
+  background: rgba(15, 23, 42, 0.8);
+}
+
+/* Border Effects */
+.border-animated {
+  border: 2px solid transparent;
+  background: 
+    linear-gradient(var(--winter-900), var(--winter-900)) padding-box,
+    linear-gradient(45deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink), var(--neon-cyan)) border-box;
+  background-size: 400% 400%;
+  animation: gradient-shift 4s ease-in-out infinite;
+}
+
+/* Scan Line */
+.scan-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.scan-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+  animation: scan-move 2s linear infinite;
+}
+
+@keyframes scan-move {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(200vh); }
+}
+
+/* Hologram Effect */
+.hologram {
+  position: relative;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(0, 255, 255, 0.1) 50%,
+    transparent 70%
+  );
+  background-size: 200% 200%;
+  animation: hologram-flicker 4s ease-in-out infinite;
+}
+
+/* Loading Spinner */
+.spinner-neon {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(0, 255, 255, 0.3);
+  border-top: 3px solid var(--neon-cyan);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Progress Bar */
+.progress-neon {
+  width: 100%;
+  height: 8px;
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-neon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple));
+  border-radius: 4px;
+  width: var(--progress, 0%);
+  transition: width 0.3s ease;
+  box-shadow: 0 0 10px currentColor;
+}
+
+/* Tooltip */
+.tooltip-neon {
+  position: relative;
+  cursor: help;
+}
+
+.tooltip-neon::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 0.75rem;
+  background: rgba(15, 23, 42, 0.95);
+  color: var(--neon-cyan);
+  border: 1px solid var(--neon-cyan);
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.tooltip-neon:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-8px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .btn-primary,
+  .btn-secondary,
+  .btn-ghost {
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+  }
+  
+  .card-glass,
+  .card-neon,
+  .card-cyber {
+    padding: 1rem;
+  }
+  
+  .hero-cyber::before {
+    background-size: 50px 50px;
+  }
+}
