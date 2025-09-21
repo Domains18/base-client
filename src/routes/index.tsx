@@ -6,8 +6,7 @@ export const Route = createFileRoute('/')({
 
 function App() {
   return (
-    <div className="min-h-screen bg-dark-900 text-white overflow-hidden">
-      {/* Navigation */}
+    <div className="bg-dark-900 text-white overflow-hidden h-full">
       <nav className="relative z-50 flex items-center justify-between px-6 py-4">
         <div className="flex items-center space-x-8">
           {/* Logo */}
