@@ -181,6 +181,10 @@ const config: Config = {
           '50%': { filter: 'hue-rotate(30deg) brightness(1.2)' },
           '75%': { filter: 'hue-rotate(15deg) brightness(1.1)' },
         },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
       },
 
       animation: {
@@ -193,6 +197,7 @@ const config: Config = {
         'thermal-pulse': 'thermal-pulse 5s ease-in-out infinite',
         'spin-slow': 'spin 3s linear infinite',
         'bounce-slow': 'bounce 3s infinite',
+        float: 'float 6s ease-in-out infinite',
       },
 
       borderRadius: {

@@ -1,5 +1,28 @@
 /* Orange + Dark Theme Component Library - Pure CSS */
 
+/* ==================== ANIMATIONS ==================== */
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ==================== GRADIENTS ==================== */
+
+.bg-gradient-radial {
+    background: radial-gradient(var(--tw-gradient-stops));
+}
 /* ==================== BUTTONS ==================== */
 
 /* Primary Flame Button */
