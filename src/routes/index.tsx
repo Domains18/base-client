@@ -1,3 +1,4 @@
+import { Header } from '@/components/header/header'
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/')({
@@ -7,66 +8,9 @@ export const Route = createFileRoute('/')({
 function App() {
   return (
     <div className="bg-dark-900 text-white overflow-hidden h-full">
-      <nav className="relative z-50 flex items-center justify-between px-6 py-4">
-        <div className="flex items-center space-x-8">
-          {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-xl">C</span>
-            </div>
-          </div>
-
-          {/* Navigation Links */}
-          <div className="hidden md:flex items-center space-x-6">
-            <a
-              href="#"
-              className="text-gray-300 hover:text-primary transition-colors"
-            >
-              Home
-            </a>
-            <a
-              href="#"
-              className="text-gray-300 hover:text-primary transition-colors"
-            >
-              DeFi App
-            </a>
-            <a
-              href="#"
-              className="text-gray-300 hover:text-primary transition-colors"
-            >
-              Assets
-            </a>
-            <a
-              href="#"
-              className="text-gray-300 hover:text-primary transition-colors"
-            >
-              Features
-            </a>
-            <a
-              href="#"
-              className="text-gray-300 hover:text-primary transition-colors"
-            >
-              Pricing
-            </a>
-            <a
-              href="#"
-              className="text-gray-300 hover:text-primary transition-colors"
-            >
-              FAQ
-            </a>
-            <div className="flex items-center space-x-2">
-              <span className="text-gray-300">Protection</span>
-              <div className="w-6 h-6 bg-gray-700 rounded-full flex items-center justify-center">
-                <span className="text-xs text-gray-300">17</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Create Account Button */}
-        <button className="btn-primary">Create Account</button>
-      </nav>
-
+      
+      <Header />
+      
       {/* Hero Section */}
       <div className="relative min-h-screen flex items-center justify-center px-6">
         {/* Background Effects */}
