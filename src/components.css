@@ -1,62 +1,64 @@
-/* Orange + Dark Theme Component Library - Pure CSS */
+/* Updated entire component library from ruby/red to bright green crypto theme */
+/* Crypto Green + Dark Theme Component Library - Pure CSS */
 
 /* ==================== ANIMATIONS ==================== */
 
 @keyframes float {
 
-    0%,
-    100% {
-        transform: translateY(0px);
-    }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
 
-    50% {
-        transform: translateY(-10px);
-    }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .animate-float {
-    animation: float 3s ease-in-out infinite;
+  animation: float 3s ease-in-out infinite;
 }
 
 /* ==================== GRADIENTS ==================== */
 
 .bg-gradient-radial {
-    background: radial-gradient(var(--tw-gradient-stops));
+  background: radial-gradient(var(--tw-gradient-stops));
 }
+
 /* ==================== BUTTONS ==================== */
 
-/* Primary Flame Button */
+/* Primary Crypto Button */
 .btn-primary {
   position: relative;
   overflow: hidden;
   padding: 0.75rem 1.5rem;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
   font-weight: 700;
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   background: transparent;
-  border: 2px solid #EE2E3B;
-  color: #EE2E3B;
+  border: 2px solid #00ff88;
+  color: #00ff88;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   border-radius: 0.25rem;
-  
-  background-image: linear-gradient(45deg, transparent 0%, rgba(238, 46, 59, 0.1) 50%, transparent 100%);
+
+  background-image: linear-gradient(45deg, transparent 0%, rgba(0, 255, 136, 0.1) 50%, transparent 100%);
   background-size: 200% 200%;
   background-position: 100% 0;
 }
 
 .btn-primary:hover {
   background-position: 0 100%;
-  background-color: #EE2E3B;
-  color: #1a1a1a;
-  box-shadow: 0 0 20px #EE2E3B;
+  background-color: #00ff88;
+  color: #000000;
+  box-shadow: 0 0 20px #00ff88;
   text-shadow: none;
 }
 
 .btn-primary::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
@@ -70,34 +72,34 @@
   left: 100%;
 }
 
-/* Secondary Flame Button */
+/* Secondary Crypto Button */
 .btn-secondary {
   position: relative;
   overflow: hidden;
   padding: 0.75rem 1.5rem;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
   font-weight: 700;
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   background: transparent;
-  border: 2px solid #ff5722;
-  color: #ff5722;
+  border: 2px solid #00d4aa;
+  color: #00d4aa;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   border-radius: 0.25rem;
 }
 
 .btn-secondary:hover {
-  background-color: #ff5722;
-  color: #1a1a1a;
-  box-shadow: 0 0 20px #ff5722;
+  background-color: #00d4aa;
+  color: #000000;
+  box-shadow: 0 0 20px #00d4aa;
 }
 
 /* Ghost Button */
 .btn-ghost {
   padding: 0.75rem 1.5rem;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
   font-weight: 600;
   font-size: 0.875rem;
   text-transform: uppercase;
@@ -111,9 +113,9 @@
 }
 
 .btn-ghost:hover {
-  border-color: #EE2E3B;
-  color: #EE2E3B;
-  box-shadow: 0 0 20px rgba(238, 46, 59, 0.3);
+  border-color: #00ff88;
+  color: #00ff88;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
 }
 
 /* ==================== CARDS ==================== */
@@ -125,35 +127,33 @@
   border-radius: 0.75rem;
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(238, 46, 59, 0.2);
-  box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.5),
-    inset 0 1px 0 rgba(238, 46, 59, 0.1);
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(0, 255, 136, 0.1);
   transition: all 0.3s ease;
 }
 
 .card-glass:hover {
-  border-color: rgba(238, 46, 59, 0.4);
-  background: rgba(238, 46, 59, 0.05);
-  box-shadow: 0 0 20px rgba(238, 46, 59, 0.3);
+  border-color: rgba(0, 255, 136, 0.4);
+  background: rgba(0, 255, 136, 0.05);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
 }
 
-/* Flame Card */
+/* Crypto Card */
 .card-flame {
   position: relative;
   padding: 1.5rem;
   border-radius: 0.75rem;
   background: rgba(23, 23, 23, 0.8);
-  border: 2px solid rgba(238, 46, 59, 0.3);
+  border: 2px solid rgba(0, 255, 136, 0.3);
   transition: all 0.3s ease;
 }
 
 .card-flame::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: 0.75rem;
-  background: linear-gradient(135deg, rgba(238, 46, 59, 0.1) 0%, transparent 50%, rgba(255, 87, 34, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.1) 0%, transparent 50%, rgba(0, 255, 255, 0.1) 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -163,8 +163,8 @@
 }
 
 .card-flame:hover {
-  border-color: #EE2E3B;
-  box-shadow: 0 0 20px #EE2E3B;
+  border-color: #00ff88;
+  box-shadow: 0 0 20px #00ff88;
   transform: translateY(-2px);
 }
 
@@ -173,28 +173,31 @@
   position: relative;
   padding: 1.5rem;
   background: rgba(0, 0, 0, 0.9);
-  border-left: 4px solid #ff5722;
+  border-left: 4px solid #00d4aa;
   border-radius: 0 0.5rem 0.5rem 0;
-  
-  background-image: 
-    repeating-linear-gradient(45deg, #000000 0px, #000000 2px, #0b0b0b 2px, #0b0b0b 4px),
-    repeating-linear-gradient(-45deg, transparent 0px, transparent 2px, rgba(238, 46, 59, 0.05) 2px, rgba(238, 46, 59, 0.05) 4px);
+
+  background-image: repeating-linear-gradient(45deg, #000000 0px, #000000 2px, #0b0b0b 2px, #0b0b0b 4px),
+    repeating-linear-gradient(-45deg,
+      transparent 0px,
+      transparent 2px,
+      rgba(0, 255, 136, 0.05) 2px,
+      rgba(0, 255, 136, 0.05) 4px);
   background-size: 8px 8px, 8px 8px;
 }
 
 /* ==================== INPUTS ==================== */
 
-/* Flame Input */
+/* Crypto Input */
 .input-flame {
   width: 100%;
   padding: 0.75rem 1rem;
   background: rgba(23, 23, 23, 0.6);
   border: 1px solid #525252;
-  color: #1a1a1a;
+  color: #ffffff;
   border-radius: 0.5rem;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .input-flame::placeholder {
@@ -203,11 +206,9 @@
 
 .input-flame:focus {
   outline: none;
-  border-color: #EE2E3B;
+  border-color: #00ff88;
   background: rgba(23, 23, 23, 0.8);
-  box-shadow: 
-    0 0 0 2px rgba(238, 46, 59, 0.3),
-    0 0 20px rgba(238, 46, 59, 0.1);
+  box-shadow: 0 0 0 2px rgba(0, 255, 136, 0.3), 0 0 20px rgba(0, 255, 136, 0.1);
 }
 
 /* Carbon Input */
@@ -216,9 +217,9 @@
   padding: 0.75rem 1rem;
   background: rgba(0, 0, 0, 0.8);
   border: 1px solid #525252;
-  border-left: 4px solid #ff5722;
-  color: #1a1a1a;
-  font-family: 'Fira Code', monospace;
+  border-left: 4px solid #00d4aa;
+  color: #ffffff;
+  font-family: "Fira Code", monospace;
   font-size: 0.875rem;
   transition: all 0.3s ease;
   border-radius: 0 0.5rem 0.5rem 0;
@@ -226,8 +227,8 @@
 
 .input-carbon:focus {
   outline: none;
-  border-color: #ff5722;
-  box-shadow: 0 0 20px rgba(255, 87, 34, 0.3);
+  border-color: #00d4aa;
+  box-shadow: 0 0 20px rgba(0, 212, 170, 0.3);
 }
 
 /* ==================== NAVIGATION ==================== */
@@ -246,11 +247,11 @@
 }
 
 .nav-carbon::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   border-radius: 0.5rem;
-  background: linear-gradient(90deg, rgba(238, 46, 59, 0.1) 0%, rgba(255, 87, 34, 0.1) 50%, rgba(255, 167, 38, 0.1) 100%);
+  background: linear-gradient(90deg, rgba(0, 255, 136, 0.1) 0%, rgba(0, 212, 170, 0.1) 50%, rgba(0, 255, 255, 0.1) 100%);
   opacity: 0.5;
 }
 
@@ -262,20 +263,20 @@
   transition: all 0.3s ease;
   border-radius: 0.375rem;
   cursor: pointer;
-  font-family: 'Rajdhani', sans-serif;
+  font-family: "Rajdhani", sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 .nav-item:hover {
-  color: #EE2E3B;
+  color: #00ff88;
   background: rgba(23, 23, 23, 0.6);
 }
 
 .nav-item.active {
-  color: #EE2E3B;
+  color: #00ff88;
   background: rgba(23, 23, 23, 0.8);
-  box-shadow: 0 0 20px rgba(238, 46, 59, 0.3);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
 }
 
 /* ==================== CONTAINERS ==================== */
@@ -288,19 +289,17 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #000000 0%, #171717 50%, #000000 100%);
-  
-  background-image: 
-    radial-gradient(circle at 25% 25%, rgba(238, 46, 59, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(255, 87, 34, 0.1) 0%, transparent 50%);
+
+  background-image: radial-gradient(circle at 25% 25%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(0, 255, 255, 0.1) 0%, transparent 50%);
 }
 
 .hero-dark::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background-image: 
-    linear-gradient(rgba(238, 46, 59, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(238, 46, 59, 0.02) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(0, 255, 136, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 136, 0.02) 1px, transparent 1px);
   background-size: 60px 60px;
   animation: ember-pulse 8s ease-in-out infinite;
 }
@@ -310,21 +309,18 @@
   position: relative;
   padding: 5rem 1rem;
   background: rgba(0, 0, 0, 0.5);
-  background-image: linear-gradient(45deg, transparent 49%, rgba(238, 46, 59, 0.01) 50%, transparent 51%);
+  background-image: linear-gradient(45deg, transparent 49%, rgba(0, 255, 136, 0.01) 50%, transparent 51%);
 }
 
 /* ==================== TEXT EFFECTS ==================== */
 
-/* Flame Text */
+/* Crypto Text */
 .text-flame {
   position: relative;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-weight: 700;
-  color: #EE2E3B;
-  text-shadow: 
-    0 0 5px currentColor,
-    0 0 10px currentColor,
-    0 0 15px currentColor;
+  color: #00ff88;
+  text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
   animation: flame-flicker 2s ease-in-out infinite alternate;
 }
 
@@ -339,21 +335,21 @@
 }
 
 .text-flame::before {
-  color: #ff5722;
+  color: #00d4aa;
   animation: heat-glitch-1 0.4s infinite;
   clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
 }
 
 .text-flame::after {
-  color: #ffa726;
+  color: #00ffff;
   animation: heat-glitch-2 0.4s infinite;
   clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
 }
 
 /* Ember Text */
 .text-ember {
-  font-family: 'Fira Code', monospace;
-  color: #ff5722;
+  font-family: "Fira Code", monospace;
+  color: #00d4aa;
   border-right: 2px solid;
   white-space: nowrap;
   overflow: hidden;
@@ -362,9 +358,9 @@
 
 /* Molten Gradient Text */
 .text-molten {
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-weight: 700;
-  background: linear-gradient(90deg, #EE2E3B 0%, #ff5722 50%, #ffa726 100%);
+  background: linear-gradient(90deg, #00ff88 0%, #00d4aa 50%, #00ffff 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -375,49 +371,97 @@
 /* ==================== ANIMATIONS ==================== */
 
 @keyframes flame-flicker {
-  0%, 100% { 
-    text-shadow: 
-      0 0 5px currentColor,
-      0 0 10px currentColor,
-      0 0 15px currentColor;
+
+  0%,
+  100% {
+    text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
   }
-  50% { 
-    text-shadow: 
-      0 0 10px currentColor,
-      0 0 20px currentColor,
-      0 0 30px currentColor;
+
+  50% {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
   }
 }
 
 @keyframes heat-glitch-1 {
-  0%, 100% { transform: translate(0); }
-  20% { transform: translate(-2px, 2px); }
-  40% { transform: translate(-2px, -2px); }
-  60% { transform: translate(2px, 2px); }
-  80% { transform: translate(2px, -2px); }
+
+  0%,
+  100% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    transform: translate(2px, -2px);
+  }
 }
 
 @keyframes heat-glitch-2 {
-  0%, 100% { transform: translate(0); }
-  20% { transform: translate(2px, -2px); }
-  40% { transform: translate(2px, 2px); }
-  60% { transform: translate(-2px, -2px); }
-  80% { transform: translate(-2px, 2px); }
+
+  0%,
+  100% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(2px, -2px);
+  }
+
+  40% {
+    transform: translate(2px, 2px);
+  }
+
+  60% {
+    transform: translate(-2px, -2px);
+  }
+
+  80% {
+    transform: translate(-2px, 2px);
+  }
 }
 
 @keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: currentColor; }
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: currentColor;
+  }
 }
 
 @keyframes molten-flow {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 /* ==================== UTILITIES ==================== */
@@ -431,9 +475,7 @@
 /* Border Effects */
 .border-flame {
   border: 2px solid transparent;
-  background: 
-    linear-gradient(#000000, #000000) padding-box,
-    linear-gradient(45deg, #EE2E3B, #ff5722, #ffa726, #EE2E3B) border-box;
+  background: linear-gradient(#000000, #000000) padding-box, linear-gradient(45deg, #00ff88, #00d4aa, #00ffff, #00ff88) border-box;
   background-size: 400% 400%;
   animation: molten-flow 4s ease-in-out infinite;
 }
@@ -445,47 +487,64 @@
 }
 
 .heat-scan::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #EE2E3B, transparent);
+  background: linear-gradient(90deg, transparent, #00ff88, transparent);
   animation: heat-scan-move 2s linear infinite;
 }
 
 @keyframes heat-scan-move {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(200vh); }
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(200vh);
+  }
 }
 
 /* Heat Distortion */
 .heat-distortion {
   position: relative;
-  background: linear-gradient(
-    45deg,
-    transparent 30%,
-    rgba(238, 46, 59, 0.1) 50%,
-    transparent 70%
-  );
+  background: linear-gradient(45deg, transparent 30%, rgba(0, 255, 136, 0.1) 50%, transparent 70%);
   background-size: 200% 200%;
   animation: heat-shimmer 4s ease-in-out infinite;
 }
 
 @keyframes heat-shimmer {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 /* Loading Spinner */
 .spinner-flame {
   width: 40px;
   height: 40px;
-  border: 3px solid rgba(238, 46, 59, 0.3);
-  border-top: 3px solid #EE2E3B;
+  border: 3px solid rgba(0, 255, 136, 0.3);
+  border-top: 3px solid #00ff88;
   border-radius: 50%;
   animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Progress Bar */
@@ -499,12 +558,12 @@
 }
 
 .progress-flame::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
-  background: linear-gradient(90deg, #EE2E3B, #ff5722);
+  background: linear-gradient(90deg, #00ff88, #00d4aa);
   border-radius: 4px;
   width: var(--progress, 0%);
   transition: width 0.3s ease;
@@ -525,8 +584,8 @@
   transform: translateX(-50%);
   padding: 0.5rem 0.75rem;
   background: rgba(0, 0, 0, 0.95);
-  color: #EE2E3B;
-  border: 1px solid #EE2E3B;
+  color: #00ff88;
+  border: 1px solid #00ff88;
   border-radius: 0.25rem;
   font-size: 0.75rem;
   white-space: nowrap;
@@ -544,19 +603,20 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
   .btn-primary,
   .btn-secondary,
   .btn-ghost {
     padding: 0.5rem 1rem;
     font-size: 0.75rem;
   }
-  
+
   .card-glass,
   .card-flame,
   .card-carbon {
     padding: 1rem;
   }
-  
+
   .hero-dark::before {
     background-size: 30px 30px;
   }
