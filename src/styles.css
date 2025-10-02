@@ -459,6 +459,56 @@ body::after {
   }
 }
 
+.animate-bounce-float {
+  animation: bounce-float 3s ease-in-out infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Floating card specific styles */
+.floating-card-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  /* Allow clicks through the container */
+  z-index: 40;
+  /* Above main content but below modals */
+}
+
+.floating-card-layer>* {
+  pointer-events: auto;
+  /* Re-enable pointer events for the cards themselves */
+}
+
+/* Enhanced bounce float animation with slight rotation */
+@keyframes bounce-float-enhanced {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-10px) rotate(1deg);
+  }
+}
 @media (max-width: 768px) {
   body::before {
     background-size: 30px 30px;
