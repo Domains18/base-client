@@ -1,3 +1,4 @@
+import { Link } from '@tanstack/react-router'
 import { Logo } from '../logo/logo'
 
 import { User } from 'lucide-react'
@@ -10,36 +11,30 @@ export function Header() {
       </div>
 
       <div className="hidden md:flex items-center space-x-6 bg-gray-800 px-4 py-2 rounded-full backdrop-blur-md text-sm">
-        <a
-          href="#"
+        <Link
+          to="/"
           className="text-gray-300 hover:text-primary transition-colors"
         >
           Home
-        </a>
-        <a
-          href="#"
+        </Link>
+        <Link
+          to="/documents"
           className="text-gray-300 hover:text-primary transition-colors"
         >
-          Inspiration
-        </a>
-        <a
-          href="#"
+          Documents
+        </Link>
+        <Link
+          to="/passwords"
           className="text-gray-300 hover:text-primary transition-colors"
         >
-          Assets
-        </a>
-        <a
-          href="#"
+          Passwords
+        </Link>
+        <Link
+          to="/url-shortener"
           className="text-gray-300 hover:text-primary transition-colors"
         >
-          Calendar
-        </a>
-        <a
-          href="#"
-          className="text-gray-300 hover:text-primary transition-colors"
-        >
-          Resume
-        </a>
+          URL Shortener
+        </Link>
         <div
           className="flex items-center space-x-2 bg-gray-400 rounded-2xl px-3 py-1
     text-sm cursor-pointer hover:bg-gray-500 transition-colors
