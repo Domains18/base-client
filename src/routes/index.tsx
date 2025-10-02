@@ -7,32 +7,24 @@ export const Route = createFileRoute('/')({
 
 function App() {
   return (
-    <div className="bg-dark-900 text-white overflow-hidden h-full">
+    <div className="bg-dark-900 text-white overflow-hidden min-h-screen">
       <Header />
-      {/* Hero Section */}
-      <div className="relative min-h-screen flex items-center justify-center px-6">
-        {/* Background Effects */}
+      <div className="relative min-h-screen flex items-center justify-center px-4 sm:px-6">
         <div className="absolute inset-0 overflow-hidden">
-          {/* Main gradient background */}
           <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900"></div>
-
-          {/* Glowing orb effect */}
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-radial from-primary/20 via-flame-600/10 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-radial from-primary/20 via-accent-teal/10 to-transparent rounded-full blur-3xl"></div>
         </div>
 
-        {/* Asset Cards - Floating */}
         <div className="absolute inset-0">
-          {/* Passwords Card - Top Left */}
           <Link
             to="/passwords"
-            className="absolute top-1/4 left-1/4 card-glass p-4 w-40 animate-float hover:border-primary transition-all duration-300"
+            className="absolute top-1/4 left-1/4 card-glass p-4 w-40 border border-white/30 hover:border-primary transition-all duration-300 animate-[bounce-float_3s_ease-in-out_infinite]"
           >
             <div className="flex items-center space-x-2 mb-2">
-              <div className="w-6 h-6 bg-gradient-to-r from-primary to-flame-600 rounded-full flex items-center justify-center">
-                {/* Lock Icon */}
+              <div className="w-6 h-6 bg-gradient-to-r from-primary to-accent-teal rounded-full flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 text-white"
+                  className="h-4 w-4 text-black"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -50,18 +42,15 @@ function App() {
             <div className="text-xs text-gray-400">256 items</div>
           </Link>
 
-          {/* Documents Card - Top Right */}
           <Link
             to="/documents"
-            className="absolute top-1/3 right-1/4 card-glass p-4 w-40 animate-float hover:border-primary transition-all duration-300"
-            style={{ animationDelay: '1s' }}
+            className="absolute top-1/3 right-1/4 card-glass p-4 w-40 border border-white/30 hover:border-primary transition-all duration-300 animate-[bounce-float_3s_ease-in-out_infinite_1s]"
           >
             <div className="flex items-center space-x-2 mb-2">
-              <div className="w-6 h-6 bg-gradient-to-r from-flame-600 to-accent-gold rounded-full flex items-center justify-center">
-                {/* Document Icon */}
+              <div className="w-6 h-6 bg-gradient-to-r from-accent-teal to-accent-cyan rounded-full flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 text-white"
+                  className="h-4 w-4 text-black"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -79,18 +68,15 @@ function App() {
             <div className="text-xs text-gray-400">12 Files</div>
           </Link>
 
-          {/* URL Shortener Card - Bottom Left */}
           <Link
             to="/url-shortener"
-            className="absolute bottom-1/4 left-1/3 card-glass p-4 w-40 animate-float hover:border-primary transition-all duration-300"
-            style={{ animationDelay: '2s' }}
+            className="absolute bottom-1/4 left-1/3 card-glass p-4 w-40 border border-white/30 hover:border-primary transition-all duration-300 animate-[bounce-float_3s_ease-in-out_infinite_2s]"
           >
             <div className="flex items-center space-x-2 mb-2">
-              <div className="w-6 h-6 bg-gradient-to-r from-accent-gold to-flame-500 rounded-full flex items-center justify-center">
-                {/* Link Icon */}
+              <div className="w-6 h-6 bg-gradient-to-r from-accent-cyan to-accent-mint rounded-full flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 text-white"
+                  className="h-4 w-4 text-black"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -108,18 +94,15 @@ function App() {
             <div className="text-xs text-gray-400">8 Links</div>
           </Link>
 
-          {/* Personal CRM Card - Bottom Right */}
           <Link
             to="/crm"
-            className="absolute bottom-1/3 right-1/3 card-glass p-4 w-40 animate-float hover:border-primary transition-all duration-300"
-            style={{ animationDelay: '0.5s' }}
+            className="absolute bottom-1/3 right-1/3 card-glass p-4 w-40 border border-white/30 hover:border-primary transition-all duration-300 animate-[bounce-float_3s_ease-in-out_infinite_0.5s]"
           >
             <div className="flex items-center space-x-2 mb-2">
-              <div className="w-6 h-6 bg-gradient-to-r from-flame-500 to-primary rounded-full flex items-center justify-center">
-                {/* User Icon */}
+              <div className="w-6 h-6 bg-gradient-to-r from-accent-mint to-primary rounded-full flex items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 text-white"
+                  className="h-4 w-4 text-black"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -138,14 +121,12 @@ function App() {
           </Link>
         </div>
 
-        {/* Central Content */}
         <div className="relative z-10 text-center max-w-4xl mx-auto">
-          {/* Lock Button */}
           <div className="mb-8">
-            <button className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 mx-auto">
+            <button className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 mx-auto border border-white/20">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-8 w-8 text-white"
+                className="h-8 w-8 text-primary"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -160,8 +141,7 @@ function App() {
             </button>
           </div>
 
-          {/* Sanctuary Badge */}
-          <div className="inline-flex items-center space-x-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-4 py-2 mb-8">
+          <div className="inline-flex items-center space-x-2 bg-white/5 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 mb-8">
             <div className="w-4 h-4 bg-primary rounded-full"></div>
             <span className="text-sm text-gray-300">
               Your Digital Sanctuary
@@ -181,34 +161,35 @@ function App() {
             </svg>
           </div>
 
-          {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
-              Your Personal Digital
+              My Personal Digital
             </span>
             <br />
-            <span className="bg-gradient-to-r from-primary via-flame-600 to-accent-gold bg-clip-text text-transparent flame-text">
+            <span className="bg-gradient-to-r from-primary via-accent-teal to-accent-cyan bg-clip-text text-transparent flame-text">
               Fortress
             </span>
           </h1>
 
-          {/* Subtitle */}
-          <p className="text-lg text-gray-400 mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed px-4">
             A secure and centralized hub for your passwords, documents, resumes,
             and personal utilities. All under your control.
           </p>
 
-          {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <Link to="/login" className="btn-primary px-8 py-3">
+            <Link
+              to="/login"
+              className="btn-primary px-8 py-3 w-full sm:w-auto text-center"
+            >
               Enter Hub
             </Link>
-            <button className="btn-ghost px-8 py-3">Learn More</button>
+            <button className="btn-ghost px-8 py-3 w-full sm:w-auto">
+              Learn More
+            </button>
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-8 flex items-center space-x-2 text-gray-400">
+        <div className="absolute bottom-8 left-4 sm:left-8 flex items-center space-x-2 text-gray-400">
           <svg
             className="w-5 h-5"
             fill="none"
@@ -222,17 +203,15 @@ function App() {
               d="M19 14l-7 7m0 0l-7-7m7 7V3"
             />
           </svg>
-          <span className="text-sm">Explore Features</span>
+          <span className="text-sm hidden sm:inline">Explore Features</span>
         </div>
 
-        {/* System Status indicator */}
-        <div className="absolute bottom-8 right-8 text-gray-400">
+        <div className="absolute bottom-8 right-4 sm:right-8 text-gray-400">
           <div className="text-sm mb-2">System Status</div>
-          <div className="w-12 h-1 bg-green-500 rounded-full"></div>
+          <div className="w-12 h-1 bg-primary rounded-full shadow-[0_0_10px_rgba(0,255,136,0.5)]"></div>
         </div>
 
-        {/* Chart/Graph visualization */}
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-64 h-32 opacity-30">
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-64 h-32 opacity-30 hidden md:block">
           <svg viewBox="0 0 256 128" className="w-full h-full">
             <defs>
               <linearGradient
@@ -242,13 +221,13 @@ function App() {
                 x2="0%"
                 y2="100%"
               >
-                <stop offset="0%" stopColor="#EE2E3B" stopOpacity="0.5" />
-                <stop offset="100%" stopColor="#EE2E3B" stopOpacity="0" />
+                <stop offset="0%" stopColor="#00ff88" stopOpacity="0.5" />
+                <stop offset="100%" stopColor="#00ff88" stopOpacity="0" />
               </linearGradient>
             </defs>
             <path
               d="M0,100 L32,90 L64,70 L96,85 L128,60 L160,75 L192,50 L224,40 L256,30"
-              stroke="#EE2E3B"
+              stroke="#00ff88"
               strokeWidth="2"
               fill="none"
               className="animate-pulse"
@@ -261,24 +240,6 @@ function App() {
         </div>
       </div>
 
-      {/* Partner Logos Section */}
-      <div className="relative z-10 py-12 border-t border-gray-800">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-wrap items-center justify-center gap-8 opacity-50">
-            {/* Partner logos - simplified as text for now */}
-            <div className="text-gray-500 font-medium text-lg">
-              QuantumGuard
-            </div>
-            <div className="text-gray-500 font-medium text-lg">CipherCloud</div>
-            <div className="text-gray-500 font-medium text-lg">DataWeave</div>
-            <div className="text-gray-500 font-medium text-lg">
-              SecureSphere
-            </div>
-            <div className="text-gray-500 font-medium text-lg">NexusVault</div>
-            <div className="text-gray-500 font-medium text-lg">IronClad</div>
-          </div>
-        </div>
-      </div>
     </div>
   )
 }
