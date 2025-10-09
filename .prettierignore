@@ -1,3 +1,17 @@
 package-lock.json
 pnpm-lock.yaml
 yarn.lock
+
+# Ignore artifacts:
+build
+coverage
+node_modules
+.gitignore
+dist
+.env
+.env.example
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+package.json
+.vscode

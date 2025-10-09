@@ -1,6 +1,3 @@
-
-
-
 interface LogoProps {
     className?: string;
 }
@@ -12,5 +9,5 @@ export function Logo({ className }: LogoProps) {
 
             <img src="/logo.png" alt="Logo" className="w-6 h-6" />
         </div>
-    )
+    );
 }
