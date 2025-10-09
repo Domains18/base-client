@@ -54,14 +54,14 @@ function TerminalBackground() {
   }, [])
 
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-start p-4 font-mono text-xs text-primary/30">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
+      <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-start p-4 font-mono text-xs text-primary opacity-80">
         {lines.map((line, index) => (
           <div
             key={line.id}
             className="mb-1 animate-fade-in"
             style={{
-              opacity: 1 - index * 0.1,
+              opacity: Math.max(0.2, 1 - index * 0.1),
               animation: 'fadeIn 0.5s ease-in',
             }}
           >
@@ -258,7 +258,7 @@ function App() {
       <div className="relative min-h-screen flex items-center justify-center px-4 sm:px-6">
         <TerminalBackground />
 
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-dark-900 via-dark-800 to-dark-900"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-radial from-primary/20 via-accent-teal/10 to-transparent rounded-full blur-3xl"></div>
         </div>

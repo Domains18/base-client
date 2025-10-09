@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 
-export const Route = createFileRoute('/login')({
+export const Route = createFileRoute('/login/')({
   component: LoginComponent,
 })
 
@@ -17,10 +17,10 @@ function LoginComponent() {
 
         <form className="card-glass p-8 space-y-6">
           <div className="space-y-2">
-            <label htmlFor="email" className="text-sm font-medium text-gray-300">Email</label>
+            <label htmlFor="username" className="text-sm font-medium text-gray-300">UserName</label>
             <input
-              type="email"
-              id="email"
+              type="text"
+              id="username"
               placeholder="you@example.com"
               className="w-full bg-dark-800 border border-gray-700 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
             />

@@ -12,10 +12,10 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as UrlShortenerRouteImport } from './routes/url-shortener'
 import { Route as SignupRouteImport } from './routes/signup'
 import { Route as PasswordsRouteImport } from './routes/passwords'
-import { Route as LoginRouteImport } from './routes/login'
 import { Route as DocumentsRouteImport } from './routes/documents'
 import { Route as CrmRouteImport } from './routes/crm'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LoginIndexRouteImport } from './routes/login/index'
 
 const UrlShortenerRoute = UrlShortenerRouteImport.update({
   id: '/url-shortener',
@@ -30,11 +30,6 @@ const SignupRoute = SignupRouteImport.update({
 const PasswordsRoute = PasswordsRouteImport.update({
   id: '/passwords',
   path: '/passwords',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LoginRoute = LoginRouteImport.update({
-  id: '/login',
-  path: '/login',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DocumentsRoute = DocumentsRouteImport.update({
@@ -52,34 +47,39 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LoginIndexRoute = LoginIndexRouteImport.update({
+  id: '/login/',
+  path: '/login/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/crm': typeof CrmRoute
   '/documents': typeof DocumentsRoute
-  '/login': typeof LoginRoute
   '/passwords': typeof PasswordsRoute
   '/signup': typeof SignupRoute
   '/url-shortener': typeof UrlShortenerRoute
+  '/login': typeof LoginIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/crm': typeof CrmRoute
   '/documents': typeof DocumentsRoute
-  '/login': typeof LoginRoute
   '/passwords': typeof PasswordsRoute
   '/signup': typeof SignupRoute
   '/url-shortener': typeof UrlShortenerRoute
+  '/login': typeof LoginIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/crm': typeof CrmRoute
   '/documents': typeof DocumentsRoute
-  '/login': typeof LoginRoute
   '/passwords': typeof PasswordsRoute
   '/signup': typeof SignupRoute
   '/url-shortener': typeof UrlShortenerRoute
+  '/login/': typeof LoginIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -87,38 +87,38 @@ export interface FileRouteTypes {
     | '/'
     | '/crm'
     | '/documents'
-    | '/login'
     | '/passwords'
     | '/signup'
     | '/url-shortener'
+    | '/login'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/crm'
     | '/documents'
-    | '/login'
     | '/passwords'
     | '/signup'
     | '/url-shortener'
+    | '/login'
   id:
     | '__root__'
     | '/'
     | '/crm'
     | '/documents'
-    | '/login'
     | '/passwords'
     | '/signup'
     | '/url-shortener'
+    | '/login/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CrmRoute: typeof CrmRoute
   DocumentsRoute: typeof DocumentsRoute
-  LoginRoute: typeof LoginRoute
   PasswordsRoute: typeof PasswordsRoute
   SignupRoute: typeof SignupRoute
   UrlShortenerRoute: typeof UrlShortenerRoute
+  LoginIndexRoute: typeof LoginIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -144,13 +144,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PasswordsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/login': {
-      id: '/login'
-      path: '/login'
-      fullPath: '/login'
-      preLoaderRoute: typeof LoginRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/documents': {
       id: '/documents'
       path: '/documents'
@@ -172,6 +165,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/login/': {
+      id: '/login/'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -179,10 +179,10 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CrmRoute: CrmRoute,
   DocumentsRoute: DocumentsRoute,
-  LoginRoute: LoginRoute,
   PasswordsRoute: PasswordsRoute,
   SignupRoute: SignupRoute,
   UrlShortenerRoute: UrlShortenerRoute,
+  LoginIndexRoute: LoginIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

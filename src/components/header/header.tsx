@@ -1,6 +1,7 @@
 import { Link } from '@tanstack/react-router'
+import { KeyIcon } from 'lucide-react'
 import { Logo } from '../logo/logo'
-import { User } from 'lucide-react'
+
 
 export function Header() {
   return (
@@ -46,10 +47,14 @@ export function Header() {
       </div>
 
       <div className="flex items-center">
-        <button className="hidden md:inline-flex items-center space-x-2 bg-gradient-to-r from-primary to-accent-teal hover:from-accent-teal hover:to-primary text-black font-semibold px-4 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20">
-          <User className="w-4 h-4" />
-          <span>Create Account</span>
-        </button>
+        <Link
+          to="/login"
+        >
+          <button className="hidden md:inline-flex items-center space-x-2 bg-gradient-to-r from-primary to-accent-teal hover:from-accent-teal hover:to-primary text-black font-semibold px-4 py-2 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20">
+            <KeyIcon className="w-4 h-4" />
+            <span>FORTRESS</span>
+          </button>
+        </Link>
       </div>
     </nav>
   )
